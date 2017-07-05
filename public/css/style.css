@@ -1,0 +1,22 @@
+body {
+  padding-top: 70px !important;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  align-items:  stretch;
+  justify-content:  space-around;
+  max-width: 800px;
+  max-height: 600px;
+  overflow-y: scroll;
+  margin: auto;
+  padding-top: 100px;
+}
+
+#twitter-box {
+  height: 350px;
+  width: 320px;
+  margin: auto;
+  overflow-y: scroll;
+}

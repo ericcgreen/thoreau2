@@ -1,6 +1,7 @@
 angular
   .module("thoreauApp", [
     "ui.router",
+    "ngSanitize",
     "ngResource"
   ])
   .config([
@@ -23,8 +24,10 @@ angular
     ArticlesNewControllerFunction
   ])
   .controller("articlesShowCtrl", [
+    "$scope",
     "$stateParams",
     "$state",
+    "$sce",
     "ThoreauFactory",
     ArticlesShowControllerFunction
   ])
@@ -54,7 +57,7 @@ angular
         controllerAs: "vm"
       })
       //activated when a state transition is made and if an invalid url is entered, redirect to the articles list
-      $urlRouterProvider.otherwise("articles")
+      $urlRouterProvider.otherwise("/")
   }
 
   function ThoreauFactoryFunction($resource) {
@@ -78,7 +81,7 @@ angular
     }
   }
 
-  function ArticlesShowControllerFunction($stateParams, $state, ThoreauFactory) {
+  function ArticlesShowControllerFunction($scope, $stateParams, $state,  $sce, ThoreauFactory) {
     this.article = ThoreauFactory.get({post_title: $stateParams.post_title})
     this.update = function() {
       this.article.$update({post_title:$stateParams.post_title}, (article) => {
@@ -90,4 +93,9 @@ angular
         $state.go("articlesIndex")
       })
     }
+    var html = this.article.post_content
+      this.deliberatelyTrustDangerousSnippet = function() {
+        $sanitize(html)
+          return $sce.trustAsHtml(html);
+      }
   }

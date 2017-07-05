@@ -11,10 +11,9 @@ var ArticleSchema = new mongoose.Schema(
       "post_type": String,
       "tips": String,
       "headerImage": String,
-      // "source": String,
-      // "link": String,
-      // "tags": String,
-      // "rating": String,
+      "source": String,
+      "link": String,
+      "rating": String
   }
 );
 

@@ -1,0 +1,10 @@
+<div class="post-show">
+  <h2>{{vm.article.post_title}}</h2>
+  <h4>by: {{vm.article.post_author}}</h4>
+  <h5>{{vm.article.post_date}}</h5>
+
+  <div ng-bind-html="vm.article.post_content"></div>
+
+  <button id="like-button">Like</button>
+
+</div>

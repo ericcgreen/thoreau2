@@ -21,6 +21,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js">
     </script>
 
+    <!-- angularjs sanitize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.4/angular-sanitize.min.js"></script>
+
    <!-- jquery -->
    <script
      src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -42,13 +45,44 @@
     <!-- custom js -->
     <script src="js/app.js"></script>
 
+    <!-- twitter widget -->
+    <meta name="twitter:dnt" content="on">
+
     <!-- page title -->
     <title>Thoreau</title>
   </head>
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" ui-sref="articlesIndex">Thoreau</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Add Truth</a></li>
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" class="form-control" ng-model="truth" placeholder="&#128269 Search ...">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
     <!-- angularjs yield -->
     <main data-ui-view></main>
-    
+
   </body>
 </html>

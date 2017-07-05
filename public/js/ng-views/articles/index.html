@@ -1,4 +1,38 @@
-<div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit" ui-sref="articlesShow({title: article.title})">
-  <h3>{{article.post_title}}</h3>
-  <h5>{{article.post_author}}</h5>
+<!-- left: key -->
+
+<!-- <div class="col-sm-4" id="key-box">
+  <p id="key-title">GA's #1 article truth rating application.</p>
+  <div class="color-box" id="green-box">
+  <p>Green factual, accurate, and trustworthy. Evidence is reliable, concrete and verifiable</p>
+  </div>
+  <div class="color-box" id="yellow-box">
+  <p>Yellow factual, not entirely accurate, some concrete and verifieable evidence</p>
+  </div>
+  <div class="color-box" id="blue-box">
+  <p>Blue requires more concrete and verifiable evidence</p>
+  </div>
+  <div class="color-box" id="purple-box">
+  <p>Purple not entirely unaccurate, very limited concrete and verifieable evidence</p>
+  </div>
+  <div class="color-box" id="red-box">
+  <p>Red not factual, not accurate, and untrustworthy. Evidence is not reliable, concrete, and verifiible evidence</p>
+  </div>
+</div> -->
+
+<!-- center: article list -->
+<div class="col-sm-8 article-list text-left">
+  <div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit" ui-sref="articlesShow({post_title: article.post_title})">
+    <h3>{{article.post_title}}</h3>
+    <h5>{{article.post_author}}</h5>
+  </div>
+</div>
+
+<!-- right: twitter timeline-->
+<div class="col-sm-4 text-center">
+  <div id="twitter-box">
+    <a class="twitter-timeline"  href="https://twitter.com/hashtag/USNews" data-widget-id="882464960500158464">#USNews Tweets</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/search?q=USNews" data-widget-id="882436611656605696">#USNews Tweets</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
 </div>
