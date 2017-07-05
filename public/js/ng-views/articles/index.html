@@ -1,0 +1,4 @@
+<div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit" ui-sref="articlesShow({title: article.title})">
+  <h3>{{article.post_title}}</h3>
+  <h5>{{article.post_author}}</h5>
+</div>
