@@ -42,11 +42,11 @@
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- custom js -->
+    <!-- custom angularjs -->
     <script src="js/app.js"></script>
 
-    <!-- twitter widget -->
-    <meta name="twitter:dnt" content="on">
+    <!-- custom javascript -->
+    <script src="js/script.js"></script>
 
     <!-- page title -->
     <title>Thoreau</title>
@@ -69,7 +69,12 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Add Truth</a></li>
+            <li><a ui-sref="articlesNew">Add Truth</a></li>
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input class="form-control" type="number" ng-model='numLimit' min="1" id="limit-number" placeholder="Number of Truths">
+              </div>
+            </form>
             <form class="navbar-form navbar-right">
               <div class="form-group">
                 <input type="text" class="form-control" ng-model="truth" placeholder="&#128269 Search ...">
