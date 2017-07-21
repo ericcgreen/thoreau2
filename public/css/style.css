@@ -18,6 +18,7 @@ body {
   width: 320px;
   margin: auto;
   overflow-y: scroll;
+  z-index: 100000;
 }
 
 .navbar-right {
@@ -25,7 +26,7 @@ body {
 }
 
 #quotes-box {
-  width: 320px;
+  width: 300px;
   height: 170px;
   border: 2px solid black;
   text-align: center;
@@ -38,3 +39,10 @@ body {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.right-list {
+width: 400px;
+height: 600px;
+text-align: center;
+align-self: center;
+}*/

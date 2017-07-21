@@ -10,16 +10,15 @@ $(document).ready(() => {
     "Disobedience is the true foundation of liberty. The obedient must be slaves.",
     "The universe is wider than our views of it.",
     "Truths and roses have thorns about them."
-  ]
+  ];
 
   function randomize(quotes){
     let random = quotes[Math.floor(Math.random()*quotes.length)];
-    $('#quotes-line').html(random)
-  }
+    $('#quotes-injector').html(random);
+  };
 
-  randomize(quotes)
-
-})
+  randomize(quotes);
+});
 
 //go through the array of quotes and return one randomly to display in the text box.
 //Math.random [0,1] times the length of the array

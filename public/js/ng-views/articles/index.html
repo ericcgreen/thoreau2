@@ -1,37 +1,16 @@
-<!-- left: key -->
-
-<!-- <div class="col-sm-4" id="key-box">
-  <p id="key-title">GA's #1 article truth rating application.</p>
-  <div class="color-box" id="green-box">
-  <p>Green factual, accurate, and trustworthy. Evidence is reliable, concrete and verifiable</p>
-  </div>
-  <div class="color-box" id="yellow-box">
-  <p>Yellow factual, not entirely accurate, some concrete and verifieable evidence</p>
-  </div>
-  <div class="color-box" id="blue-box">
-  <p>Blue requires more concrete and verifiable evidence</p>
-  </div>
-  <div class="color-box" id="purple-box">
-  <p>Purple not entirely unaccurate, very limited concrete and verifieable evidence</p>
-  </div>
-  <div class="color-box" id="red-box">
-  <p>Red not factual, not accurate, and untrustworthy. Evidence is not reliable, concrete, and verifiible evidence</p>
-  </div>
-</div> -->
-
-<!-- center: article list -->
-  <div class="col-sm-8 article-list text-left">
+<!-- left: article list -->
+  <section class="col-sm-8 article-list text-left">
     <div class="articles" data-ng-repeat="article in vm.articles | filter: truth | limitTo: numLimit" ui-sref="articlesShow({post_title: article.post_title})">
       <h3>{{article.post_title}}</h3>
       <h5>{{article.post_author}}</h5>
     </div>
-  </div>
+  </section>
 
 <!-- right: quote generator twitter timeline-->
   <!-- random quote generator -->
-  <div class="col-sm-4 text-center">
+  <section class="col-sm-4 right-list text-center">
     <div id="quotes-box">
-      <p>"<span id="quotes-line"></span>" -- Henry David Thoreau</p>
+      <p>"<span id="quotes-injector"></span>" -- Henry David Thoreau</p>
     </div>
 
     <!-- twitter timeline -->
@@ -39,7 +18,7 @@
       <a class="twitter-timeline"  href="https://twitter.com/search?q=news" data-widget-id="882464960500158464">Tweets about news</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
-  </div>
+  </section>
 
 <!-- jquery needed to run on this page only -->
-  <script src="js/script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
